@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f5f7fa;
+    font-family: Arial, sans-serif;
+    color: #263238;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 24px 50px;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 0 0 8px;
+    font-weight: 700;
+}
+
+.subtitulo {
+    color: #6b7280;
+    margin: 0 0 25px;
+}
+
+.formulario {
+    background: #fff;
+    border: 1px solid #e1e6ed;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .04);
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.campo-pesquisa {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+#pesquisaMunicipio {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #d8dde5;
+    border-radius: 12px;
+    padding: 0 15px;
+    font-size: 16px;
+    outline: none;
+    background: #fff;
+}
+
+#pesquisaMunicipio:focus {
+    border-color: #1565c0;
+}
+
+#listaMunicipios {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #d8dde5;
+    border-radius: 12px;
+    max-height: 220px;
+    overflow-y: auto;
+    z-index: 100;
+    display: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .10);
+}
+
+.municipio-item {
+    padding: 13px 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.municipio-item:hover {
+    background: #f0f5ff;
+}
+
+#municipioSelecionado {
+    display: none;
+}
+
+select {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #d8dde5;
+    border-radius: 12px;
+    padding: 0 15px;
+    font-size: 16px;
+    background: #fff;
+    outline: none;
+    margin-bottom: 2px;
+}
+
+select:focus {
+    border-color: #1565c0;
+}
+
+button {
+    width: 100%;
+    height: 52px;
+    margin-top: 20px;
+    border: 0;
+    border-radius: 13px;
+    background: #1565c0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0d5bb5;
+}
+
+.mais-barato {
+    margin-top: 25px;
+    background: #fff;
+    border-radius: 19px;
+    padding: 22px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .05);
+}
+
+.mais-barato h2 {
+    margin: 0 0 16px;
+    font-size: 20px;
+}
+
+.mais-barato h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+
+.mais-barato > p {
+    color: #6b7280;
+    margin: 0 0 12px;
+}
+
+.mais-barato strong {
+    color: #1565c0;
+    font-size: 25px;
+}
+
+.economia {
+    color: #198754 !important;
+    font-weight: bold;
+    margin-top: 10px !important;
+}
+
+.data {
+    color: #6b7280;
+    font-size: 13px;
+    margin-top: 10px !important;
+}
+
+.titulo-resultados {
+    font-size: 21px;
+    margin: 28px 0 15px;
+}
+
+.preco-card {
+    background: #fff;
+    border-radius: 17px;
+    padding: 18px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .04);
+}
+
+.preco-card h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+}
+
+.preco-card p {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 6px 0;
+}
+
+.preco-card > strong {
+    display: block;
+    color: #1565c0;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.preco-economia {
+    color: #198754 !important;
+    font-size: 13px !important;
+    font-weight: bold;
+}
+
+.mensagem {
+    background: #fff;
+    padding: 18px;
+    border-radius: 16px;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 22px 18px 40px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .formulario {
+        padding: 18px;
+    }
+
+}

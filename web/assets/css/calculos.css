@@ -1,0 +1,688 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul: #1976D2;
+    --azul-escuro: #1565C0;
+    --azul-claro: #E7F1FA;
+
+    --fundo: #F3F6FA;
+    --branco: #FFFFFF;
+
+    --texto: #20242C;
+    --cinza: #737D89;
+    --cinza-claro: #929AA5;
+
+    --campo: #F6F8FA;
+
+    --verde: #239B59;
+    --verde-claro: #E5F5EC;
+
+    --borda: #E7ECF2;
+
+    --sombra: 0 6px 22px rgba(31, 45, 61, 0.055);
+}
+
+/* ==========================================
+   PÁGINA
+========================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    min-height: 100vh;
+}
+
+/* ==========================================
+   CONTEÚDO PRINCIPAL
+========================================== */
+
+.calculos-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 35px 45px 60px;
+}
+
+/* ==========================================
+   REMOVE CABEÇALHO INTERNO DUPLICADO
+========================================== */
+
+.topo-calculos {
+    display: none !important;
+}
+
+/* ==========================================
+   CARTÃO DO VEÍCULO
+========================================== */
+
+.veiculo-card {
+    width: 100%;
+    max-width: 1050px;
+
+    min-height: 210px;
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    padding: 35px;
+
+    margin: 0 auto 65px;
+
+    color: var(--branco);
+
+    background: linear-gradient(
+        120deg,
+        #1976D2,
+        #1565C0
+    );
+
+    border-radius: 35px;
+
+    box-shadow: 0 15px 35px rgba(25, 118, 210, 0.13);
+}
+
+.icone-veiculo {
+    width: 105px;
+    height: 105px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 43px;
+
+    background: rgba(255, 255, 255, 0.17);
+
+    border-radius: 28px;
+}
+
+.veiculo-info {
+    min-width: 0;
+}
+
+.etiqueta {
+    display: block;
+
+    margin-bottom: 19px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.veiculo-info h2 {
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 1.3;
+
+    overflow-wrap: anywhere;
+}
+
+.veiculo-info p {
+    margin-top: 10px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   RESUMO DO VEÍCULO
+========================================== */
+
+.titulo-secao {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto 30px;
+}
+
+.titulo-secao h2 {
+    font-size: 28px;
+    font-weight: 700;
+
+    color: var(--texto);
+
+    margin-bottom: 13px;
+}
+
+.titulo-secao p {
+    font-size: 17px;
+    color: var(--cinza);
+    font-weight: 600;
+}
+
+/* ==========================================
+   INDICADORES
+========================================== */
+
+.indicador-card {
+    width: 100%;
+    max-width: 1050px;
+
+    padding: 32px;
+
+    margin: 0 auto 27px;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+    border-radius: 30px;
+
+    box-shadow: var(--sombra);
+
+    transition: transform 0.2s ease;
+}
+
+.indicador-card:hover {
+    transform: translateY(-2px);
+}
+
+.indicador-topo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 38px;
+}
+
+.icone {
+    width: 70px;
+    height: 70px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 22px;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.indicador-azul {
+    color: #287BB8;
+    background: var(--azul-claro);
+}
+
+.indicador-verde {
+    color: var(--verde);
+    background: var(--verde-claro);
+}
+
+.indicador-topo span {
+    color: var(--cinza);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.indicador-valor {
+    display: block;
+
+    color: var(--texto);
+
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+
+    overflow-wrap: anywhere;
+}
+
+.indicador-descricao {
+    margin-top: 19px;
+
+    color: var(--cinza-claro);
+
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   FUNCIONALIDADES
+========================================== */
+
+.funcionalidade-card {
+    width: 100%;
+    max-width: 1050px;
+
+    padding: 35px;
+
+    margin: 42px auto 30px;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+    border-radius: 32px;
+
+    box-shadow: var(--sombra);
+}
+
+.funcionalidade-titulo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 35px;
+}
+
+.funcionalidade-titulo h2 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.funcionalidade-titulo p {
+    margin-top: 7px;
+
+    color: var(--cinza);
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   CAMPOS
+========================================== */
+
+.campo-visual {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 18px 22px;
+    margin-bottom: 13px;
+
+    background: var(--campo);
+
+    border-radius: 21px;
+
+    color: var(--cinza);
+}
+
+.campo-visual span {
+    color: #287BB8;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.campo-visual label {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.campo-legenda {
+    display: block;
+
+    margin: 10px 0 8px 22px;
+
+    color: #454C56;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+.funcionalidade-card input {
+    width: 100%;
+    min-height: 78px;
+
+    padding: 18px 22px;
+    margin-bottom: 22px;
+
+    background: var(--campo);
+
+    border: 1px solid transparent;
+    border-radius: 21px;
+
+    color: var(--texto);
+
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+
+    outline: none;
+
+    transition: border 0.2s ease;
+}
+
+.funcionalidade-card input:focus {
+    border-color: var(--azul);
+}
+
+.funcionalidade-card input::placeholder {
+    color: #8A929D;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.botao-azul {
+    width: 100%;
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 12px;
+    padding: 18px;
+
+    color: var(--branco);
+
+    background: var(--azul);
+
+    border: none;
+    border-radius: 22px;
+
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.botao-azul:hover:not(:disabled) {
+    background: var(--azul-escuro);
+}
+
+.botao-azul:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+    background: var(--azul);
+}
+
+.aviso-funcionalidade {
+    margin-top: 15px;
+
+    color: var(--cinza-claro);
+
+    font-size: 18px;
+    line-height: 2;
+}
+
+/* ==========================================
+   SEM VEÍCULO
+========================================== */
+
+.sem-veiculo {
+    width: 100%;
+    max-width: 1050px;
+
+    padding: 35px 25px;
+    margin: 0 auto 30px;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+    border-radius: 25px;
+
+    box-shadow: var(--sombra);
+
+    text-align: center;
+}
+
+.sem-veiculo h2 {
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.sem-veiculo p {
+    color: var(--cinza);
+    line-height: 1.6;
+}
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media (min-width: 1200px) {
+
+    .calculos-container {
+        padding: 40px 55px 65px;
+    }
+
+    .veiculo-card {
+        min-height: 220px;
+    }
+
+    .indicador-card {
+        padding: 35px;
+    }
+
+    .funcionalidade-card {
+        padding: 38px;
+    }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .calculos-container {
+        padding: 30px 25px 50px;
+    }
+
+    .veiculo-card,
+    .titulo-secao,
+    .indicador-card,
+    .funcionalidade-card {
+        max-width: 100%;
+    }
+}
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media (max-width: 600px) {
+
+    .calculos-container {
+        padding: 25px 16px 35px;
+    }
+
+    .veiculo-card {
+        min-height: 170px;
+
+        gap: 16px;
+        padding: 22px;
+
+        margin-bottom: 48px;
+
+        border-radius: 32px;
+    }
+
+    .icone-veiculo {
+        width: 76px;
+        height: 76px;
+
+        border-radius: 22px;
+        font-size: 34px;
+    }
+
+    .etiqueta {
+        font-size: 12px;
+        margin-bottom: 13px;
+    }
+
+    .veiculo-info h2 {
+        font-size: 22px;
+    }
+
+    .veiculo-info p {
+        font-size: 15px;
+    }
+
+    .titulo-secao {
+        margin-bottom: 25px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 24px;
+    }
+
+    .titulo-secao p {
+        font-size: 15px;
+    }
+
+    .indicador-card {
+        padding: 25px;
+        margin-bottom: 25px;
+        border-radius: 27px;
+    }
+
+    .indicador-topo {
+        gap: 16px;
+        margin-bottom: 37px;
+    }
+
+    .icone {
+        width: 68px;
+        height: 68px;
+
+        border-radius: 21px;
+        font-size: 28px;
+    }
+
+    .indicador-topo span {
+        font-size: 16px;
+    }
+
+    .indicador-valor {
+        font-size: 28px;
+    }
+
+    .indicador-descricao {
+        font-size: 14px;
+    }
+
+    .funcionalidade-card {
+        padding: 25px;
+        margin-top: 35px;
+        border-radius: 29px;
+    }
+
+    .funcionalidade-titulo {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .funcionalidade-titulo h2 {
+        font-size: 22px;
+    }
+
+    .funcionalidade-titulo p {
+        font-size: 14px;
+    }
+
+    .campo-visual {
+        min-height: 74px;
+        padding: 16px;
+        gap: 15px;
+        border-radius: 19px;
+    }
+
+    .campo-visual label {
+        font-size: 15px;
+    }
+
+    .funcionalidade-card input {
+        min-height: 74px;
+        padding: 16px;
+        font-size: 17px;
+        border-radius: 19px;
+    }
+
+    .botao-azul {
+        min-height: 72px;
+        font-size: 16px;
+        border-radius: 20px;
+    }
+}
+
+/* ==========================================
+   CELULARES PEQUENOS
+========================================== */
+
+@media (max-width: 360px) {
+
+    .veiculo-card {
+        gap: 12px;
+        padding: 17px;
+    }
+
+    .icone-veiculo {
+        width: 65px;
+        height: 65px;
+        font-size: 29px;
+    }
+
+    .veiculo-info h2 {
+        font-size: 19px;
+    }
+
+    .indicador-card,
+    .funcionalidade-card {
+        padding: 20px;
+    }
+
+    .indicador-valor {
+        font-size: 25px;
+    }
+}
+
+/* CORREÇÃO DE INTERAÇÃO DOS CAMPOS */
+
+.funcionalidade-card {
+    position: relative;
+}
+
+.funcionalidade-card input {
+    position: relative;
+    z-index: 9999;
+    pointer-events: auto !important;
+    user-select: text !important;
+    -webkit-user-select: text !important;
+    cursor: text;
+}
+
+.funcionalidade-card input:focus {
+    outline: none;
+    border: 1px solid var(--azul);
+}
+
+.funcionalidade-card label {
+    pointer-events: auto;
+}

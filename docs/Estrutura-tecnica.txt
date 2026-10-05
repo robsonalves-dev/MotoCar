@@ -1,0 +1,31 @@
+MOTOCAR
+│
+├── 🌐 Web
+│   ├── Frontend
+│   └── Painel do usuário
+│
+├── 📱 Android
+│   └── Flutter
+│
+├── ⚙️ Backend
+│   ├── Autenticação
+│   ├── Usuários
+│   ├── Veículos
+│   ├── Abastecimentos
+│   ├── Cálculos
+│   └── Histórico
+│
+├── 🗄️ Banco de dados
+│   ├── usuários
+│   ├── veículos
+│   ├── abastecimentos
+│   └── configurações
+│
+├── ⛽ Dados de combustível
+│   └── ANP
+│
+├── 🗺️ Rotas
+│   └── OpenStreetMap + OSRM
+│
+└── 💰 Monetização
+    └── Anúncios

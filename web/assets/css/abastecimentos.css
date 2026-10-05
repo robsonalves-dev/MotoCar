@@ -1,0 +1,348 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+main {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 35px 5%;
+}
+
+.lista-abastecimentos {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 110px;
+}
+
+.card-abastecimento {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e8edf5;
+    border-radius: 28px;
+    padding: 32px;
+    margin-bottom: 22px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
+}
+
+.card-topo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icone-combustivel {
+    width: 65px;
+    height: 65px;
+    border-radius: 16px;
+    background: #eaf7ef;
+    color: #43a66a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.dados-veiculo {
+    flex: 1;
+    min-width: 0;
+}
+
+.dados-veiculo strong {
+    display: block;
+    font-size: 22px;
+    color: #172554;
+    text-transform: lowercase;
+}
+
+.dados-veiculo span {
+    display: block;
+    color: #8491a5;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.menu-acoes {
+    position: relative;
+}
+
+.menu-acoes summary {
+    cursor: pointer;
+    font-size: 28px;
+    padding: 8px;
+    list-style: none;
+}
+
+.menu-acoes button {
+    width: auto;
+    padding: 10px 16px;
+    background: #ffffff;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+}
+
+.linha {
+    border: 0;
+    border-top: 1px solid #e5eaf1;
+    margin: 28px 0;
+}
+
+.detalhes-principais,
+.detalhes-secundarios {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.detalhes-principais strong {
+    font-size: 20px;
+    color: #172554;
+}
+
+.valor-abastecimento {
+    color: #1769bd;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.detalhes-secundarios {
+    margin-top: 20px;
+    color: #8491a5;
+    font-size: 17px;
+    font-weight: 600;
+    flex-wrap: wrap;
+}
+
+.botao-adicionar {
+    position: fixed;
+    right: 35px;
+    bottom: 25px;
+    background: #1769bd;
+    color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    padding: 19px 26px;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0 5px 14px rgba(0,0,0,.15);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.formulario-novo {
+    display: none;
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 20px;
+}
+
+.formulario-novo.aberto {
+    display: block;
+}
+
+.formulario-novo form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #ffffff;
+    padding: 28px;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+}
+
+.formulario-novo label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.formulario-novo input,
+.formulario-novo select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #1e293b;
+    font-size: 15px;
+}
+
+.formulario-novo button {
+    background: #1769bd;
+    color: #ffffff;
+    border: 0;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    main {
+        padding: 25px 15px;
+    }
+
+    .card-abastecimento {
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .dados-veiculo strong {
+        font-size: 18px;
+    }
+
+    .detalhes-principais strong,
+    .valor-abastecimento {
+        font-size: 16px;
+    }
+
+    .detalhes-secundarios {
+        font-size: 14px;
+    }
+
+    .botao-adicionar {
+        right: 15px;
+        bottom: 18px;
+        left: 15px;
+        width: calc(100% - 30px);
+    }
+}
+
+
+.menu-acoes {
+    position: relative;
+}
+
+.menu-acoes summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 8px;
+    color: #334155;
+    cursor: pointer;
+    list-style: none;
+}
+
+.menu-acoes summary::-webkit-details-marker {
+    display: none;
+}
+
+.menu-acoes[open] summary {
+    background: #f1f5f9;
+}
+
+.menu-acoes > div {
+    position: absolute;
+    top: 42px;
+    right: 0;
+    min-width: 130px;
+    padding: 6px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+    z-index: 20;
+}
+
+.menu-acoes button {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: #334155;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.menu-acoes button:hover {
+    background: #eff6ff;
+    color: #1769bd;
+}
+
+
+/* FORMULÁRIO DE EDIÇÃO */
+
+.formulario-edicao {
+    display: none;
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 20px;
+}
+
+.formulario-edicao.aberto {
+    display: block;
+}
+
+.formulario-edicao form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #ffffff;
+    padding: 28px;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+}
+
+.formulario-edicao label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.formulario-edicao input,
+.formulario-edicao select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #1e293b;
+    font-size: 15px;
+}
+
+.formulario-edicao button {
+    background: #1769bd;
+    color: #ffffff;
+    border: 0;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.formulario-edicao .botao-cancelar {
+    background: #64748b;
+}
+
+@media (max-width: 640px) {
+    .formulario-edicao {
+        padding: 10px;
+    }
+
+    .formulario-edicao form {
+        padding: 20px;
+    }
+}
+
+

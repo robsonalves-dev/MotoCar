@@ -1,0 +1,30 @@
+definição técnica inicial do MotoCar
+
+1-Web
+2-Android 
+3-Backend 
+4-Banco de Dados
+5-Dados ANP 
+6-Rotas/OSRM  
+7-Monetização
+
+Web/Android = interface; Web/Android = Flutter
+
+Backend = regras e API; Backend = PHP
+Backend: API → Autenticação → Usuários → Veículos → Abastecimentos 
+→ Cálculos → Histórico
+
+Banco = dados;   Banco de Dados = MySQL
+Banco de Dados: usuarios, veiculos, abastecimentos e configuracoes
+
+ANP = combustíveis;
+Dados ANP: preços por posto, município, combustível, 
+data da coleta e atualização semanal
+
+OSRM = rotas;
+Rotas/OSRM: origem, destino, distância, tempo estimado 
+e cálculo do custo da viagem
+
+Monetização = anúncios
+Monetização: Google AdMob
+Monetização: Google AdSense

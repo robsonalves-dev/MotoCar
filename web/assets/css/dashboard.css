@@ -1,0 +1,592 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --azul: #1769c2;
+    --azul-claro: #eaf2ff;
+    --fundo: #f4f6fb;
+    --branco: #ffffff;
+    --texto: #20232a;
+    --cinza: #92969e;
+    --borda: #edf0f5;
+    --menu: #111827;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+/* Estrutura */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Menu lateral */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 25px 15px;
+    background: var(--menu);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 10px 35px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu-titulo {
+    padding: 0 12px 15px;
+    color: #9ca3af;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.menu-link:hover,
+.menu-link.ativo {
+    background: var(--azul);
+    color: white;
+}
+
+.menu-rodape {
+    margin-top: auto;
+    padding-top: 25px;
+}
+
+.menu-link.sair {
+    color: #fca5a5;
+}
+
+/* Conteúdo */
+
+.conteudo {
+    flex: 1;
+    min-width: 0;
+    margin-left: 250px;
+}
+
+/* Cabeçalho */
+
+.topbar {
+    min-height: 88px;
+    padding: 15px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-bottom: 1px solid var(--borda);
+}
+
+.topbar-esquerda,
+.topbar-acoes {
+    display: flex;
+    align-items: center;
+}
+
+.topbar-esquerda {
+    gap: 14px;
+}
+
+.topbar-esquerda h1 {
+    font-size: 25px;
+    margin: 0;
+}
+
+.topbar-acoes {
+    gap: 15px;
+}
+
+.botao-acao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    background: transparent;
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.botao-menu {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: var(--texto);
+}
+
+/* Área principal */
+
+main {
+    width: 100%;
+    max-width: 1450px;
+    margin: auto;
+    padding: 35px;
+}
+
+/* Saudação */
+
+.boas-vindas {
+    margin-bottom: 32px;
+}
+
+.boas-vindas h2 {
+    margin: 0 0 12px;
+    font-size: 30px;
+}
+
+.boas-vindas p {
+    margin: 0;
+    color: var(--cinza);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Cartão do veículo */
+
+.card-veiculo {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    min-height: 190px;
+    padding: 30px;
+    margin-bottom: 35px;
+    border-radius: 25px;
+    background: linear-gradient(120deg, #1769c2, #2581dc);
+    color: white;
+    box-shadow: 0 10px 25px rgba(23, 105, 194, 0.12);
+}
+
+.veiculo-icone {
+    flex-shrink: 0;
+}
+
+.veiculo-label {
+    display: block;
+    margin-bottom: 12px;
+    color: #d8eaff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.veiculo-dados h2 {
+    margin: 0 0 9px;
+    font-size: 27px;
+}
+
+.veiculo-dados p {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* Resumo */
+
+.secao {
+    margin-bottom: 38px;
+}
+
+.secao-titulo {
+    margin: 0 0 20px;
+    font-size: 25px;
+}
+
+.resumo {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.card-resumo {
+    min-height: 205px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+    border: 1px solid var(--borda);
+    border-radius: 24px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(25, 40, 70, 0.035);
+}
+
+.resumo-icone {
+    margin-bottom: 23px;
+    background: var(--azul-claro);
+    border-radius: 18px;
+}
+
+.resumo-label {
+    margin-bottom: 12px;
+    color: var(--cinza);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-resumo strong {
+    color: #17191e;
+    font-size: 25px;
+}
+
+/* Últimos abastecimentos */
+
+.secao-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.secao-cabecalho .secao-titulo {
+    margin-bottom: 0;
+}
+
+.ver-todos {
+    color: var(--azul);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card-abastecimento {
+    padding: 28px;
+    border: 1px solid var(--borda);
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(25, 40, 70, 0.035);
+}
+
+.abastecimento-topo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.abastecimento-icone {
+    flex-shrink: 0;
+    background: #e9f7ee;
+    border-radius: 20px;
+}
+
+.abastecimento-dados {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.abastecimento-dados strong {
+    font-size: 17px;
+}
+
+.abastecimento-dados span {
+    color: var(--cinza);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.abastecimento-valor {
+    color: #2469ae;
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.abastecimento-divisor {
+    height: 1px;
+    margin: 25px 0;
+    background: #e5e7eb;
+}
+
+.abastecimento-data {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--cinza);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Tablet */
+
+@media (max-width: 1150px) {
+    .resumo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Celular */
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: 275px;
+        max-width: 85vw;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .sidebar.aberto {
+        transform: translateX(0);
+    }
+
+    .menu-overlay.visivel {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 90;
+        background: rgba(0, 0, 0, 0.45);
+    }
+
+    .conteudo {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .topbar {
+        min-height: 76px;
+        padding: 12px 16px;
+    }
+
+    .topbar-esquerda {
+        gap: 9px;
+    }
+
+    .topbar-esquerda h1 {
+        font-size: 22px;
+    }
+
+    .botao-menu {
+        display: block;
+    }
+
+    main {
+        padding: 25px 18px;
+    }
+
+    .boas-vindas h2 {
+        font-size: 27px;
+    }
+
+    .boas-vindas p {
+        font-size: 15px;
+    }
+
+    .card-veiculo {
+        min-height: 170px;
+        gap: 16px;
+        padding: 22px;
+        border-radius: 25px;
+    }
+
+    .veiculo-dados h2 {
+        font-size: 22px;
+    }
+
+    .veiculo-dados p {
+        font-size: 14px;
+    }
+
+    .resumo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .card-resumo {
+        min-height: 205px;
+        padding: 20px;
+        border-radius: 24px;
+    }
+
+    .resumo-label {
+        font-size: 14px;
+    }
+
+    .card-resumo strong {
+        font-size: 22px;
+    }
+
+    .card-abastecimento {
+        padding: 20px;
+        border-radius: 24px;
+    }
+
+    .abastecimento-topo {
+        gap: 13px;
+    }
+
+    .abastecimento-valor {
+        font-size: 19px;
+    }
+
+    .abastecimento-dados strong,
+    .abastecimento-dados span,
+    .abastecimento-data {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    main {
+        padding: 20px 12px;
+    }
+
+    .resumo {
+        gap: 9px;
+    }
+
+    .card-resumo {
+        min-height: 190px;
+        padding: 15px;
+    }
+
+    .card-resumo strong {
+        font-size: 19px;
+    }
+
+    .veiculo-dados h2 {
+        font-size: 19px;
+    }
+
+    .abastecimento-valor {
+        font-size: 17px;
+    }
+    
+/* Melhorias visuais do menu MotoCar */
+
+.sidebar {
+    background: #111827;
+    padding: 28px 16px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    padding: 0 16px;
+    margin-bottom: 42px;
+    color: #ffffff;
+}
+
+.menu-titulo {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #94a3b8;
+    padding: 0 16px;
+    margin-bottom: 14px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 49px;
+    padding: 0 16px;
+    border-radius: 12px;
+    color: #dbe4f0;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.menu-link:hover {
+    background: #1e293b;
+    color: #ffffff;
+}
+
+.menu-link.ativo {
+    background: #1769c2;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(23, 105, 194, 0.18);
+}
+
+.menu-icone {
+    width: 22px;
+    min-width: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.menu-rodape {
+    margin-top: auto;
+    padding-top: 25px;
+    border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.menu-link.sair {
+    color: #fca5a5;
+}
+
+.menu-link.sair:hover {
+    background: rgba(239, 68, 68, 0.10);
+    color: #fecaca;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 270px;
+        max-width: 85vw;
+    }
+
+    .logo {
+        margin-bottom: 30px;
+    }
+
+    .menu-link {
+        min-height: 46px;
+    }
+
+}

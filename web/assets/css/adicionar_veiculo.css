@@ -1,0 +1,142 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fb;
+    color: #202938;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: #ffffff;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #edf0f5;
+}
+
+header h1 {
+    color: #1769c2;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+header a {
+    color: #1769c2;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* CONTEÚDO */
+
+main {
+    width: 100%;
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 20px;
+}
+
+main h2 {
+    font-size: 27px;
+    color: #202938;
+    margin-bottom: 8px;
+}
+
+/* FORMULÁRIO */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    background: #ffffff;
+    padding: 30px;
+    border: 1px solid #edf0f5;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px rgba(20, 35, 60, 0.05);
+    margin-top: 22px;
+}
+
+/* CAMPOS */
+
+input,
+select {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 16px;
+    border: 1px solid #e1e7ef;
+    border-radius: 12px;
+    background: #fbfcfe;
+    color: #344054;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.2s;
+}
+
+input::placeholder {
+    color: #9aa3b1;
+}
+
+input:focus,
+select:focus {
+    border-color: #1769c2;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(23, 105, 194, 0.10);
+}
+
+/* BOTÃO */
+
+button {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #1769c2;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 5px 12px rgba(23, 105, 194, 0.18);
+}
+
+button:hover {
+    background: #1259a7;
+    transform: translateY(-1px);
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+    header {
+        padding: 18px 16px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    main h2 {
+        font-size: 24px;
+    }
+
+    form {
+        padding: 22px 18px;
+        border-radius: 18px;
+    }
+}

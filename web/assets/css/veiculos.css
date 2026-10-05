@@ -1,0 +1,256 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fb;
+    color: #172033;
+    min-height: 100vh;
+}
+
+.pagina-veiculos {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* CABEÇALHO */
+
+.cabecalho-veiculos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.cabecalho-veiculos h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #172033;
+    margin-bottom: 8px;
+}
+
+.cabecalho-veiculos p {
+    font-size: 14px;
+    color: #8b95a7;
+}
+
+/* BOTÃO */
+
+.btn-adicionar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #1769c2;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 22px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    transition: 0.2s;
+    white-space: nowrap;
+    box-shadow: 0 5px 12px rgba(23, 105, 194, 0.18);
+}
+
+.btn-adicionar:hover {
+    background: #1259a7;
+    transform: translateY(-2px);
+}
+
+/* RESUMO */
+
+.resumo-veiculos {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: 18px;
+    box-shadow: none;
+}
+
+.resumo-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.resumo-label {
+    color: #8b95a7;
+    font-size: 13px;
+}
+
+.resumo-info strong {
+    color: #1769c2;
+    font-size: 16px;
+}
+
+/* LISTA */
+
+.lista-veiculos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* CARTÃO */
+
+.card-veiculo {
+    background: #fff;
+    border: 1px solid #edf0f5;
+    border-radius: 22px;
+    padding: 24px;
+    box-shadow: 0 8px 25px rgba(20, 35, 60, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-veiculo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(20, 35, 60, 0.09);
+}
+
+.card-veiculo-topo {
+    display: flex;
+    align-items: center;
+    min-height: 75px;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e9edf2;
+}
+
+.veiculo-tipo {
+    display: inline-block;
+    color: #1769c2;
+    background: #edf5ff;
+    padding: 5px 9px;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.card-veiculo h2 {
+    font-size: 20px;
+    color: #202938;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: lowercase;
+}
+
+/* DADOS */
+
+.dados-veiculo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.dado-veiculo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 5px 0;
+    border: none;
+}
+
+.dado-veiculo span {
+    font-size: 12px;
+    color: #9aa3b1;
+    font-weight: 500;
+}
+
+.dado-veiculo strong {
+    font-size: 14px;
+    color: #344054;
+    font-weight: 600;
+    text-align: left;
+}
+
+.dado-veiculo:last-child {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e9edf2;
+    padding-top: 17px;
+    margin-top: 3px;
+}
+
+.dado-veiculo:last-child strong {
+    color: #1769c2;
+    font-size: 16px;
+}
+
+/* ESTADO VAZIO */
+
+.estado-vazio {
+    background: #fff;
+    border: 1px solid #edf0f5;
+    border-radius: 20px;
+    padding: 45px 25px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(20, 35, 60, 0.04);
+}
+
+.estado-vazio h3 {
+    color: #202938;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.estado-vazio p {
+    color: #8b95a7;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+/* ERRO */
+
+.mensagem-erro {
+    background: #fff1f2;
+    color: #be123c;
+    border: 1px solid #fecdd3;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    .pagina-veiculos {
+        padding: 20px 15px;
+    }
+
+    .cabecalho-veiculos {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cabecalho-veiculos h1 {
+        font-size: 25px;
+    }
+
+    .btn-adicionar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .lista-veiculos {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card-veiculo {
+        padding: 22px;
+        border-radius: 20px;
+    }
+}

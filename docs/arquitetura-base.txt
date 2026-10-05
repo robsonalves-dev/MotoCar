@@ -1,0 +1,39 @@
+                    ┌─────────────────────┐
+                    │      MOTOCAR        │
+                    │ Site + App Flutter  │
+                    └──────────┬──────────┘
+                               │
+             ┌─────────────────┼─────────────────┐
+             │                 │                 │
+             ▼                 ▼                 ▼
+        👤 CONTA          🚗 VEÍCULO        ⛽ COMBUSTÍVEL
+             │                 │                 │
+             │                 │          ┌──────┴──────┐
+             │                 │          │             │
+             │                 │       Gasolina      Etanol
+             │                 │          │             │
+             └────────┬────────┴──────────┘             │
+                      ▼                                 │
+                📊 PAINEL                               │
+                      │                                 │
+        ┌─────────────┼─────────────┐                   │
+        ▼             ▼             ▼                   ▼
+   💰 Economia    🛣️ Viagens    📈 Histórico      📍 Postos
+        │             │             │                   │
+        │             ▼             │                   │
+        │       OpenStreetMap        │                   │
+        │             +              │                   │
+        │           OSRM              │                   │
+        │             │               │                   │
+        └─────────────┼───────────────┘                   │
+                      ▼                                   │
+               🧮 CÁLCULO DE CUSTOS                       │
+                      │                                   │
+                      └──────────────┬────────────────────┘
+                                     ▼
+                              💡 ECONOMIA
+                         "Você pode economizar
+                              R$ XX/mês"
+                                     │
+                                     ▼
+                              📢 ANÚNCIOS
